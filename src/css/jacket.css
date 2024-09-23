@@ -1,0 +1,146 @@
+/* || JACKET */
+
+.main__jacket > div {
+  display: grid;
+  gap: 16px;
+  grid-template-areas:
+    "breadcrumb"
+    "p-p-details"
+    "p-p-showcase";
+}
+
+.breadcrumb {
+  grid-area: breadcrumb;
+}
+
+.breadcrumb ul {
+  display: flex;
+  align-items: center;
+  padding: 0px;
+}
+
+.breadcrumb--here {
+  color: var(--secondary-color);
+}
+
+.product-page-showcase {
+  grid-area: p-p-showcase;
+  padding-bottom: 2rem;
+}
+
+.product-page-showcase__image {
+  max-width: 100%;
+}
+
+.product-page-details {
+  grid-area: p-p-details;
+}
+
+.product-page-details {
+  font-size: var(--font-size-paragraph-large);
+  display: flex;
+  flex-direction: column;
+}
+
+.product-page-details h1 {
+  font-size: var(--font-size-heading-secondary);
+  text-align: left;
+  padding-top: 0;
+}
+
+.product-page-details .button__primary {
+  padding: 18px 24px;
+}
+
+.product-page-details .button__secondary {
+  padding: 18px 24px;
+  margin: 0px 11px 0px 0px;
+}
+
+.product-page-details__links {
+  text-decoration: underline;
+  font-size: var(--font-size-paragraph-small);
+  padding-bottom: 1rem;
+}
+
+.product-page-details__before-price {
+  color: var(--secondary-color);
+  text-decoration: line-through;
+  font-size: var(--font-size-paragraph-small);
+}
+
+details {
+  padding-top: 2rem;
+  line-height: 1.2;
+}
+
+details summary {
+  cursor: pointer;
+}
+
+details span {
+  font-weight: 600;
+}
+
+details h2 {
+  font-size: var(--font-size-heading-third);
+}
+
+details li {
+  list-style-type: disc;
+  padding-bottom: 0.5rem;
+}
+
+.size-buttons,
+.color-buttons {
+  cursor: pointer;
+}
+
+.size-buttons,
+.color-buttons,
+.included-warranty {
+  padding-bottom: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.size-buttons,
+.color-buttons,
+.included-shipping,
+.included-warranty {
+  display: flex;
+  align-items: center;
+}
+
+.color-buttons span {
+  color: #0074c7;
+  background-color: #0074c7;
+  border-radius: 50%;
+}
+
+.size-buttons .button__secondary {
+  margin-block: 4px;
+}
+
+@media (min-width: 1200px) {
+  .main__jacket > div {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "breadcrumb breadcrumb"
+      "p-p-showcase p-p-details";
+  }
+
+  .product-page-showcase__image {
+    max-width: 604px;
+  }
+
+  .product-page-details .button__primary {
+    padding: 24px 36px;
+  }
+
+  .product-page-details .button__secondary {
+    padding: 18px 24px;
+    margin: 0px 11px 0px 0px;
+  }
+}

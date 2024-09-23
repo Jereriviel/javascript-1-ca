@@ -1,0 +1,38 @@
+/* || VARIABLES */
+
+:root {
+  /* || Colors */
+
+  --primary-color: #1f405f;
+  --primary-color-medium: #3f6b95;
+  --primary-color-light: #607a93;
+  --primary-color-ultralight: #b8ccde;
+
+  --secondary-color: #737373;
+  --secondary-color-light: #dddddd;
+  --secondary-color-ultralight: #ededed;
+
+  --neutral-color-black: #1d1d1d;
+  --neutral-color-white: #fcfcfc;
+
+  /* || Font sizes */
+
+  --font-size-display: 4.5rem;
+  --font-size-display-small: 3.5rem;
+
+  --font-size-heading-primary: 3rem;
+  --font-size-heading-secondary: 2rem;
+  --font-size-heading-third: 1.5rem;
+
+  --font-size-paragraph-large: 1.125rem;
+  --font-size-paragraph-medium: 1rem;
+  --font-size-paragraph-small: 0.875rem;
+  --font-size-paragraph-xsmall: 0.75rem;
+
+  /* || Padding */
+
+  --button-padding-xsmall: 14px 18px;
+  --button-padding-small: 18px 24px;
+  --button-padding-medium: 24px 36px;
+  --button-padding-large: 28px 56px;
+}

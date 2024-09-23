@@ -1,0 +1,115 @@
+/* || HOME */
+
+.hero {
+  min-height: 700px;
+  color: var(--primary-color);
+  background-image: url(../../assets/images/backgrounds/background_hero.jpg);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding-top: 72px;
+}
+
+.hero h1 {
+  font-size: var(--font-size-display-small);
+}
+
+.hero p {
+  font-size: var(--font-size-paragraph-medium);
+  line-height: 1.5rem;
+}
+
+.newest-collection {
+  display: flex;
+  justify-content: flex-start;
+  padding-bottom: 2rem;
+}
+
+.newest-collection__carousel {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.sales-banner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 700px;
+  color: var(--primary-color);
+  font-size: var(--font-size-paragraph-large);
+  background-image: url(../../assets/images/backgrounds/background_sale_new.jpg);
+  background-position: center bottom;
+  background-size: cover;
+  text-align: center;
+  justify-content: space-between;
+  padding-bottom: 4rem;
+}
+
+.sales-banner h2 {
+  font-size: var(--font-size-display-small);
+  padding-top: 4rem;
+}
+
+.sales-banner p {
+  font-size: var(--font-size-paragraph-medium);
+  padding-bottom: 342px;
+}
+
+.sales-banner span {
+  display: none;
+}
+
+.sales-banner .button__secondary {
+  padding: 18px 24px;
+}
+
+@media (min-width: 600px) {
+  .hero {
+    color: var(--secondary-color-ultralight);
+    justify-content: center;
+    align-items: flex-start;
+    text-align: start;
+  }
+  .hero h1 {
+    font-size: var(--font-size-display);
+  }
+
+  .hero p {
+    font-size: var(--font-size-paragraph-large);
+  }
+
+  .newest-collection__carousel {
+    flex-direction: row;
+  }
+
+  .sales-banner {
+    color: var(--secondary-color-ultralight);
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  .sales-banner h2 {
+    font-size: var(--font-size-display);
+    padding-top: 0;
+    text-align: center;
+  }
+
+  .sales-banner p {
+    font-size: var(--font-size-paragraph-large);
+    text-align: left;
+    padding-bottom: 3rem;
+  }
+
+  .sales-banner span {
+    display: inline;
+  }
+
+  .sales-banner .button__secondary {
+    padding: 28px 56px;
+  }
+}

@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="Description"
+      content="RainyDays specializes on durable, high quality and comfortable jackets. Find your jacket here!"
+    />
+    <title>RainyDays | Jackets</title>
+    <link rel="stylesheet" href="src/css/styles.css" />
+    <link rel="stylesheet" href="src/css/products.css" />
+    <link rel="stylesheet" href="https://use.typekit.net/tsf5wqu.css" />
+    <link rel="stylesheet" href="https://use.typekit.net/tsf5wqu.css" />
+    <link rel="icon" href="assets/logo/favicon16x16.png" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <a href="index.html">
+          <img
+            class="logo-main"
+            src="assets/logo/RainyDays_Logo_Small.png"
+            alt="RainyDays logo small"
+        /></a>
+        <div class="header__icons">
+          <form class="form__search">
+            <input type="checkbox" id="search-checkbox" />
+            <label for="search-checkbox" class="search-icon"
+              ><span class="material-symbols-outlined"> search </span></label
+            >
+            <div class="search-field">
+              <span class="material-symbols-outlined"> search </span>
+              <input
+                type="search"
+                id="search"
+                name="search"
+                placeholder="Search"
+                required
+              />
+            </div>
+          </form>
+          <input type="checkbox" id="menu-checkbox" />
+          <label for="menu-checkbox" class="hamburger-icon"
+            ><span class="material-symbols-outlined"> menu </span></label
+          >
+          <nav>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="products.html">Jackets</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </nav>
+          <p>
+            <span class="material-symbols-outlined"> shopping_basket </span>
+          </p>
+        </div>
+      </div>
+    </header>
+    <main class="main__products center-content">
+      <div class="container">
+        <section class="product-filters">
+          <h1>Jackets</h1>
+          <input type="checkbox" id="filter-checkbox" />
+          <label for="filter-checkbox" class="filter-icon"
+            ><span class="material-symbols-outlined"> filter_alt </span></label
+          >
+          <form class="form__filters">
+            <div class="filter__activity">
+              <label for="activity">Filter by Activity</label>
+              <select name="activity" id="activity">
+                <option value="all-activities">All Activities</option>
+                <option value="ski-snowboarding">Ski/Snowboarding</option>
+                <option value="mountaineering">Mountaineering</option>
+                <option value="hiking">Hiking</option>
+                <option value="trail-running">Trail Running</option>
+              </select>
+            </div>
+            <div class="filter__size">
+              <label for="size">Filter by Size</label>
+              <select name="size" id="size">
+                <option value="all-sizes">All Sizes</option>
+                <option value="extra-small">Extra Small</option>
+                <option value="small">Small</option>
+                <option value="medium">Medium</option>
+                <option value="large">Large</option>
+                <option value="extra-large">Extra Large</option>
+              </select>
+            </div>
+            <div class="filter__color">
+              <label for="color">Filter by Color</label>
+              <select name="color" id="color">
+                <option value="all-colors">All Colors</option>
+                <option value="red">Red</option>
+                <option value="blue">Blue</option>
+                <option value="black">Black</option>
+                <option value="gray">Gray</option>
+                <option value="orange">Orange</option>
+                <option value="brown">Brown</option>
+              </select>
+            </div>
+            <div class="filter__sort-by">
+              <label for="sort-by">Sort by</label>
+              <select name="sort-by" id="sort-by">
+                <option value="newest">Newest</option>
+                <option value="price-low-high">Price Low to High</option>
+                <option value="price-high-low">Price High to Low</option>
+                <option value="discount">Discount</option>
+                <option value="bestsellers">Bestsellers</option>
+              </select>
+            </div>
+          </form>
+        </section>
+        <section class="product-list">
+          <div class="product-card">
+            <img
+              class="product-card__image"
+              src="assets/images/products/RainyDays_Jacket1.jpg"
+              alt="Scott Gore-Tex Insulated Jacket"
+            />
+            <div class="product-card__details">
+              <p class="product-card__gender">Men's</p>
+              <p class="product-card__name">Scott Gore-Tex Insulated Jacket</p>
+              <p class="product-card__price">NOK 6 900</p>
+              <span class="material-symbols-outlined"> favorite </span>
+            </div>
+          </div>
+          <div class="product-card">
+            <img
+              class="product-card__image"
+              src="assets/images/products/RainyDays_Jacket2.jpg"
+              alt="Skylar Gore-Tex Active Jacket"
+            />
+            <div class="product-card__details">
+              <p class="product-card__gender">Women's</p>
+              <p class="product-card__name">Skylar Gore-Tex Active Jacket</p>
+              <p class="product-card__price">NOK 4 500</p>
+              <span class="material-symbols-outlined"> favorite </span>
+            </div>
+          </div>
+          <div class="product-card">
+            <img
+              class="product-card__image"
+              src="assets/images/products/RainyDays_Jacket3.jpg"
+              alt="Scott Gore-Tex Alpha Jacket"
+            />
+            <div class="product-card__details">
+              <p class="product-card__gender">Men's</p>
+              <p class="product-card__name">Scott Gore-Tex Alpha Jacket</p>
+              <p class="product-card__price">NOK 4 500</p>
+              <span class="material-symbols-outlined"> favorite </span>
+            </div>
+          </div>
+          <div class="product-card">
+            <img
+              class="product-card__image"
+              src="assets/images/products/RainyDays_Jacket4.jpg"
+              alt="Scott Gore-Tex Pro Jacket"
+            />
+            <div class="product-card__details">
+              <p class="product-card__gender">Men's</p>
+              <p class="product-card__name">Scott Gore-Tex Pro Jacket</p>
+              <p class="product-card__price">NOK 5 900</p>
+              <span class="material-symbols-outlined"> favorite </span>
+            </div>
+          </div>
+          <div class="product-card">
+            <img
+              class="product-card__image"
+              src="assets/images/products/RainyDays_Jacket5.jpg"
+              alt="Scott Gore-Tex Jacket"
+            />
+            <div class="product-card__details">
+              <p class="product-card__gender">Men's</p>
+              <p class="product-card__name">Scott Gore-Tex Jacket</p>
+              <p class="product-card__price">NOK 4 900</p>
+              <span class="material-symbols-outlined"> favorite </span>
+            </div>
+          </div>
+          <div class="product-card">
+            <img
+              class="product-card__image"
+              src="assets/images/products/RainyDays_Jacket6.jpg"
+              alt="Scott Gore-Tex Performance Jacket"
+            />
+            <div class="product-card__details">
+              <p class="product-card__gender">Men's</p>
+              <p class="product-card__name">
+                Scott Gore-Tex Performance Jacket
+              </p>
+              <p class="product-card__price">NOK 5 500</p>
+              <span class="material-symbols-outlined"> favorite </span>
+            </div>
+          </div>
+          <div class="product-card">
+            <img
+              class="product-card__image"
+              src="assets/images/products/RainyDays_Jacket7.jpg"
+              alt="Scott Thermal Fleece Jacket"
+            />
+            <div class="product-card__details">
+              <p class="product-card__gender">Men's</p>
+              <p class="product-card__name">Scott Thermal Fleece Jacket</p>
+              <p class="product-card__price">NOK 2 800</p>
+              <span class="material-symbols-outlined"> favorite </span>
+            </div>
+          </div>
+          <div class="product-card">
+            <a href="products/jacket.html">
+              <img
+                class="product-card__image"
+                src="assets/images/products/RainyDays_Jacket8a.jpg"
+                alt="Skylar Gore-Tex Jacket"
+              />
+              <div class="product-card__details">
+                <p class="product-card__gender">Women's</p>
+                <p class="product-card__name">Skylar Gore-Tex Jacket</p>
+                <div class="product-card__price-both">
+                  <p class="product-card__before-price">NOK 4 900</p>
+                  <p class="product-card__price">NOK 3 430</p>
+                </div>
+                <span class="material-symbols-outlined"> favorite </span>
+              </div>
+            </a>
+          </div>
+        </section>
+      </div>
+    </main>
+    <footer>
+      <div class="container">
+        <div class="footer__logo">
+          <img
+            class="logo-inverted"
+            src="assets/logo/RainyDays_Logo_Inverted.png"
+            alt="RainyDays logo with slogan, Pushing the comfort zone."
+          />
+        </div>
+        <div class="footer__newsletter">
+          <h3>Subscribe to our Newsletter</h3>
+          <form class="form__newsletter">
+            <label for="email"></label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="example@email.com"
+              required
+            />
+            <button class="button__primary">Subscribe</button>
+          </form>
+        </div>
+        <div class="footer__links">
+          <div class="footer__links-column">
+            <h3>Products</h3>
+            <ul>
+              <li>Clothing lines</li>
+              <li>Size Guide</li>
+              <li>Product Care</li>
+              <li>Technology and Materials</li>
+              <li>Warranty</li>
+            </ul>
+          </div>
+          <div class="footer__links-column">
+            <h3>Company</h3>
+            <ul>
+              <li><a href="about.html">About</a></li>
+              <li>Terms and Conditions</li>
+              <li>Transparency Act</li>
+              <li>Careers</li>
+              <li>Blog</li>
+            </ul>
+          </div>
+          <div class="footer__links-column">
+            <h3>Support</h3>
+            <ul>
+              <li>Help Center</li>
+              <li>FAQ</li>
+              <li>Shipping</li>
+              <li>Return</li>
+              <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+          </div>
+          <div class="footer__links-column">
+            <h3>Follow Us</h3>
+            <ul>
+              <li>
+                <div>
+                  <svg
+                    width="25"
+                    height="24"
+                    viewBox="0 0 25 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <rect
+                      x="0.586914"
+                      y="0.00219727"
+                      width="24"
+                      height="24"
+                      rx="12"
+                      fill="#EDEDED"
+                    />
+                    <path
+                      d="M13.5628 18.0022V12.5284H15.4926L15.7815 10.3952H13.5628V9.03322C13.5628 8.4156 13.7429 7.99472 14.6732 7.99472L15.8596 7.99419V6.08625C15.6544 6.06029 14.9501 6.0022 14.1308 6.0022C12.4201 6.0022 11.2489 6.99631 11.2489 8.82201V10.3952H9.31418V12.5284H11.2489V18.0021H13.5628V18.0022Z"
+                      fill="#3F6B95"
+                    />
+                  </svg>
+                  <p>Facebook</p>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <svg
+                    width="25"
+                    height="24"
+                    viewBox="0 0 25 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <rect
+                      x="0.586914"
+                      y="0.00219727"
+                      width="24"
+                      height="24"
+                      rx="12"
+                      fill="#EDEDED"
+                    />
+                    <path
+                      d="M14.6049 7.13644V7.13428H15.1676L15.3732 7.17534C15.5103 7.202 15.6347 7.23693 15.7465 7.28015C15.8583 7.32338 15.9665 7.37381 16.0711 7.43143C16.1757 7.48906 16.2706 7.54778 16.3557 7.60756C16.4401 7.66664 16.5159 7.72931 16.583 7.79558C16.6493 7.86258 16.7528 7.87986 16.8935 7.84745C17.0342 7.81503 17.1857 7.77 17.348 7.71238C17.5103 7.65475 17.6708 7.58992 17.8295 7.51788C17.9882 7.44584 18.0849 7.4001 18.1195 7.38065C18.1534 7.36048 18.1714 7.34968 18.1736 7.34823L18.1757 7.34499L18.1866 7.33958L18.1974 7.33418L18.2082 7.32878L18.219 7.32338L18.2212 7.32013L18.2244 7.31797L18.2277 7.31581L18.2298 7.31257L18.2407 7.30933L18.2515 7.30717L18.2493 7.32338L18.2461 7.33958L18.2407 7.35579L18.2352 7.372L18.2298 7.38281L18.2244 7.39361L18.219 7.40982C18.2154 7.42063 18.2118 7.43503 18.2082 7.45304C18.2046 7.47106 18.1703 7.54309 18.1054 7.66915C18.0405 7.79522 17.9593 7.92309 17.8619 8.05275C17.7646 8.18242 17.6773 8.28038 17.6001 8.34667C17.5222 8.41366 17.4706 8.46048 17.4453 8.48714C17.4201 8.51451 17.3894 8.53972 17.3534 8.56278L17.2993 8.59844L17.2884 8.60384L17.2776 8.60924L17.2755 8.61248L17.2722 8.61465L17.269 8.61681L17.2668 8.62005L17.256 8.62545L17.2452 8.63085L17.243 8.6341L17.2398 8.63626L17.2365 8.63842L17.2343 8.64166L17.2322 8.6449L17.2289 8.64706L17.2257 8.64922L17.2235 8.65246H17.2776L17.5806 8.58763C17.7826 8.54441 17.9756 8.49219 18.1595 8.43095L18.4517 8.3337L18.4841 8.32289L18.5003 8.31749L18.5112 8.31209L18.522 8.30669L18.5328 8.30128L18.5436 8.29588L18.5653 8.29264L18.5869 8.29048V8.31209L18.5815 8.31425L18.5761 8.31749L18.5739 8.32073L18.5707 8.32289L18.5674 8.32505L18.5653 8.3283L18.5631 8.33154L18.5599 8.3337L18.5566 8.33586L18.5545 8.3391L18.5523 8.34234L18.549 8.3445L18.5436 8.35531L18.5382 8.36612L18.535 8.36828C18.5335 8.37044 18.4877 8.43166 18.3976 8.55197C18.3074 8.673 18.2587 8.73422 18.2515 8.73567C18.2443 8.73783 18.2342 8.74863 18.2212 8.76808C18.2089 8.78825 18.1325 8.86858 17.9918 9.00905C17.8511 9.14952 17.7133 9.2745 17.5784 9.384C17.4428 9.49422 17.3743 9.62965 17.3729 9.79029C17.3707 9.95022 17.3624 10.131 17.348 10.3327C17.3335 10.5344 17.3065 10.7524 17.2668 10.9865C17.2271 11.2206 17.1658 11.4853 17.0829 11.7807C16.9999 12.076 16.8989 12.3642 16.7799 12.6451C16.6609 12.9261 16.5364 13.1782 16.4066 13.4015C16.2767 13.6248 16.1577 13.8139 16.0495 13.9688C15.9413 14.1237 15.8313 14.2696 15.7195 14.4064C15.6077 14.5433 15.4663 14.6975 15.2953 14.8689C15.1236 15.0397 15.0299 15.1333 15.014 15.1499C14.9974 15.1657 14.9267 15.2248 14.8019 15.3271C14.6778 15.4301 14.5444 15.5331 14.4015 15.6361C14.2594 15.7384 14.1288 15.8238 14.0098 15.8922C13.8908 15.9607 13.7472 16.0388 13.5792 16.1267C13.4118 16.2153 13.2307 16.2974 13.036 16.3731C12.8412 16.4487 12.6356 16.5189 12.4192 16.5838C12.2028 16.6486 11.9936 16.699 11.7916 16.7351C11.5896 16.7711 11.3606 16.8017 11.1045 16.8269L10.7204 16.8647V16.8701H10.017V16.8647L9.92506 16.8593C9.86375 16.8557 9.81325 16.8521 9.77357 16.8485C9.7339 16.8449 9.58421 16.8251 9.32452 16.7891C9.06482 16.7531 8.86104 16.717 8.71315 16.681C8.56528 16.645 8.34525 16.5766 8.0531 16.4757C7.76094 16.3749 7.51099 16.2729 7.30324 16.1699C7.09621 16.0676 6.96636 16.0028 6.91369 15.9754C6.86176 15.9488 6.80333 15.9156 6.7384 15.876L6.64102 15.8166L6.63886 15.8133L6.63561 15.8112L6.63236 15.809L6.6302 15.8058L6.61938 15.8004L6.60856 15.795L6.6064 15.7917L6.60314 15.7896L6.5999 15.7874L6.59773 15.7842L6.59558 15.7809L6.59232 15.7788H6.58691V15.7571L6.59773 15.7593L6.60856 15.7626L6.65725 15.768C6.68971 15.7716 6.77808 15.777 6.92235 15.7842C7.06663 15.7914 7.21992 15.7914 7.38223 15.7842C7.54453 15.777 7.71046 15.7607 7.87997 15.7355C8.0495 15.7103 8.24968 15.6671 8.48051 15.6059C8.71136 15.5446 8.92344 15.4719 9.11677 15.3876C9.30938 15.3026 9.44643 15.2392 9.52795 15.1974C9.60874 15.1564 9.73209 15.08 9.89801 14.9683L10.1469 14.8009L10.149 14.7976L10.1523 14.7955L10.1555 14.7933L10.1577 14.79L10.1599 14.7868L10.1631 14.7846L10.1664 14.7825L10.1685 14.7792L10.1793 14.776L10.1902 14.7738L10.1923 14.763L10.1956 14.7522L10.1988 14.7501L10.201 14.7468L10.1144 14.7414C10.0567 14.7378 10.0008 14.7342 9.9467 14.7306C9.89259 14.727 9.80784 14.7108 9.69241 14.682C9.577 14.6532 9.45257 14.61 9.31911 14.5523C9.18566 14.4947 9.05581 14.4263 8.92957 14.347C8.80333 14.2678 8.71207 14.2019 8.6558 14.1493C8.60026 14.0974 8.52812 14.0239 8.43939 13.9288C8.35139 13.833 8.27492 13.7347 8.21 13.6338C8.14507 13.533 8.08304 13.4166 8.0239 13.2848L7.93407 13.0882L7.92866 13.072L7.92325 13.0557L7.92001 13.0449L7.91784 13.0341L7.93407 13.0363L7.9503 13.0395L8.06933 13.0557C8.14869 13.0666 8.27313 13.0702 8.44264 13.0666C8.61217 13.063 8.72938 13.0557 8.79431 13.0449C8.85923 13.0341 8.89891 13.0269 8.91333 13.0233L8.93498 13.0179L8.96203 13.0125L8.98908 13.0071L8.99124 13.0039L8.99449 13.0017L8.99775 12.9996L8.9999 12.9963L8.97826 12.9909L8.95662 12.9855L8.93498 12.9801L8.91333 12.9747L8.89169 12.9693C8.87727 12.9657 8.85203 12.9585 8.81595 12.9477C8.77988 12.9369 8.6825 12.8973 8.52379 12.8288C8.3651 12.7604 8.23886 12.6938 8.14507 12.6289C8.05106 12.5639 7.96142 12.4928 7.87672 12.4161C7.79232 12.3383 7.69964 12.2381 7.59864 12.1157C7.49765 11.9932 7.40748 11.8509 7.32812 11.6888C7.24878 11.5268 7.18926 11.3719 7.14958 11.2242C7.11006 11.0774 7.08399 10.9273 7.07169 10.7758L7.0522 10.5488L7.06302 10.551L7.07384 10.5543L7.08466 10.5597L7.09548 10.5651L7.1063 10.5705L7.11712 10.5759L7.28484 10.6515C7.39666 10.7019 7.53552 10.7452 7.70143 10.7812C7.86735 10.8172 7.96654 10.837 7.999 10.8406L8.04769 10.846H8.14507L8.14292 10.8428L8.13966 10.8406L8.13642 10.8384L8.13425 10.8352L8.1321 10.832L8.12884 10.8298L8.1256 10.8276L8.12343 10.8244L8.11261 10.819L8.10179 10.8136L8.09964 10.8103L8.09638 10.8082L8.09314 10.806L8.09097 10.8028L8.08015 10.7974L8.06933 10.792L8.06718 10.7887C8.06501 10.7873 8.03399 10.7642 7.97411 10.7196C7.91495 10.6742 7.85292 10.6155 7.788 10.5434C7.72307 10.4714 7.65815 10.3958 7.59323 10.3165C7.52818 10.2371 7.47025 10.1521 7.4201 10.0626C7.36961 9.97255 7.31622 9.858 7.25995 9.71898C7.20441 9.58067 7.16221 9.44127 7.13335 9.3008C7.1045 9.16033 7.08827 9.02166 7.08466 8.88479C7.08106 8.74791 7.08466 8.63085 7.09548 8.5336C7.1063 8.43635 7.12794 8.32649 7.1604 8.20403C7.19287 8.08157 7.23976 7.95191 7.30107 7.81503L7.39305 7.60972L7.39846 7.59352L7.40387 7.57731L7.40712 7.57515L7.40928 7.5719L7.41144 7.56866L7.41469 7.5665L7.41794 7.56866L7.4201 7.5719L7.42226 7.57515L7.42551 7.57731L7.42876 7.57947L7.43092 7.58271L7.43308 7.58595L7.43633 7.58811L7.44174 7.59892L7.44715 7.60972L7.45041 7.61189L7.45256 7.61513L7.59864 7.77721C7.69602 7.88527 7.81144 8.00593 7.94489 8.1392C8.07836 8.27246 8.15229 8.34162 8.16672 8.34667C8.18115 8.35243 8.19918 8.36899 8.22082 8.39637C8.24246 8.42303 8.3146 8.48678 8.43723 8.58763C8.55987 8.68848 8.72037 8.80555 8.91874 8.93881C9.11713 9.07208 9.33714 9.20355 9.5788 9.33322C9.82047 9.46288 10.0802 9.57994 10.3579 9.6844C10.6356 9.78886 10.8304 9.85729 10.9422 9.88971C11.054 9.92212 11.2452 9.96354 11.5157 10.014C11.7862 10.0644 11.99 10.0968 12.127 10.1112C12.2641 10.1256 12.3579 10.1339 12.4084 10.1361L12.4841 10.1382L12.482 10.122L12.4787 10.1058L12.4571 9.97075C12.4426 9.88071 12.4354 9.75464 12.4354 9.59255C12.4354 9.43047 12.4481 9.28099 12.4733 9.14412C12.4986 9.00725 12.5364 8.86858 12.5869 8.7281C12.6374 8.58763 12.6868 8.47489 12.7352 8.38989C12.7842 8.3056 12.8484 8.20943 12.9278 8.10138C13.0071 7.99332 13.1099 7.88167 13.2361 7.76641C13.3624 7.65114 13.5067 7.54849 13.669 7.45845C13.8313 7.3684 13.981 7.29996 14.118 7.25314C14.2551 7.20632 14.3705 7.1757 14.4643 7.16129C14.5581 7.14689 14.6049 7.1386 14.6049 7.13644Z"
+                      fill="#3F6B95"
+                    />
+                  </svg>
+                  <p>Twitter</p>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <svg
+                    width="25"
+                    height="24"
+                    viewBox="0 0 25 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <rect
+                      x="0.586914"
+                      y="0.00219727"
+                      width="24"
+                      height="24"
+                      rx="12"
+                      fill="#EDEDED"
+                    />
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M6.58691 12.0022C6.58691 9.60544 6.58691 8.40706 7.15804 7.5439C7.41308 7.15846 7.74317 6.82836 8.12862 6.57332C8.99177 6.0022 10.1902 6.0022 12.5869 6.0022C14.9837 6.0022 16.1821 6.0022 17.0452 6.57332C17.4307 6.82836 17.7607 7.15846 18.0158 7.5439C18.5869 8.40706 18.5869 9.60544 18.5869 12.0022C18.5869 14.399 18.5869 15.5973 18.0158 16.4605C17.7607 16.8459 17.4307 17.176 17.0452 17.4311C16.1821 18.0022 14.9837 18.0022 12.5869 18.0022C10.1902 18.0022 8.99177 18.0022 8.12862 17.4311C7.74317 17.176 7.41308 16.8459 7.15804 16.4605C6.58691 15.5973 6.58691 14.399 6.58691 12.0022ZM15.6931 12.0023C15.6931 13.7179 14.3024 15.1086 12.5868 15.1086C10.8713 15.1086 9.48053 13.7179 9.48053 12.0023C9.48053 10.2868 10.8713 8.89608 12.5868 8.89608C14.3024 8.89608 15.6931 10.2868 15.6931 12.0023ZM12.5868 14.0577C13.7219 14.0577 14.6421 13.1375 14.6421 12.0023C14.6421 10.8672 13.7219 9.94701 12.5868 9.94701C11.4517 9.94701 10.5315 10.8672 10.5315 12.0023C10.5315 13.1375 11.4517 14.0577 12.5868 14.0577ZM15.8158 9.4699C16.2189 9.4699 16.5456 9.14312 16.5456 8.74001C16.5456 8.33691 16.2189 8.01013 15.8158 8.01013C15.4127 8.01013 15.0859 8.33691 15.0859 8.74001C15.0859 9.14312 15.4127 9.4699 15.8158 9.4699Z"
+                      fill="#3F6B95"
+                    />
+                  </svg>
+                  <p>Instagram</p>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <svg
+                    width="25"
+                    height="24"
+                    viewBox="0 0 25 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <rect
+                      x="0.586914"
+                      y="0.00219727"
+                      width="24"
+                      height="24"
+                      rx="12"
+                      fill="#EDEDED"
+                    />
+                    <path
+                      d="M6.58691 7.6154C6.58691 7.23059 6.72205 6.91313 6.99232 6.66302C7.26259 6.4129 7.61394 6.28784 8.04637 6.28784C8.47109 6.28784 8.81471 6.41097 9.07726 6.65725C9.34753 6.91122 9.48267 7.24214 9.48267 7.65003C9.48267 8.01944 9.3514 8.32728 9.08884 8.57356C8.81858 8.82752 8.46336 8.95451 8.02321 8.95451H8.01162C7.58691 8.95451 7.24329 8.82752 6.98074 8.57356C6.71818 8.31959 6.58691 8.0002 6.58691 7.6154ZM8.02321 17.7164C7.31313 17.7164 6.73749 17.1408 6.73749 16.4307V11.2907C6.73749 10.5806 7.31313 10.005 8.02321 10.005C8.73329 10.005 9.30892 10.5806 9.30892 11.2907V16.4307C9.30892 17.1408 8.73329 17.7164 8.02321 17.7164ZM10.7417 16.4262C10.7376 17.1373 11.3126 17.7164 12.0236 17.7164C12.7313 17.7164 13.3051 17.1427 13.3051 16.435V13.4105C13.3051 13.1411 13.336 12.9333 13.3977 12.7871C13.5058 12.5254 13.6699 12.3042 13.89 12.1233C14.1101 11.9425 14.3861 11.8521 14.7182 11.8521C15.5831 11.8521 16.0155 12.4331 16.0155 13.5952V16.4307C16.0155 17.1408 16.5911 17.7164 17.3012 17.7164C18.0113 17.7164 18.5869 17.1408 18.5869 16.4307V13.2951C18.5869 12.156 18.3166 11.2922 17.7761 10.7034C17.2356 10.1147 16.5213 9.82031 15.6332 9.82031C14.6388 9.82031 13.8637 10.246 13.308 11.0972C13.3061 11.1001 13.3051 11.1035 13.3051 11.107V11.1204C13.3051 11.1228 13.3031 11.1248 13.3006 11.1248C13.2974 11.1248 13.2952 11.1213 13.2967 11.1184L13.3036 11.1046C13.3046 11.1027 13.3051 11.1006 13.3051 11.0984V10.8917C13.3051 10.402 12.9081 10.005 12.4183 10.005H12.0596C11.3411 10.005 10.7517 10.6121 10.7549 11.3306C10.7562 11.6123 10.7568 11.9362 10.7568 12.3023C10.7568 13.3389 10.7518 14.7136 10.7417 16.4262Z"
+                      fill="#3F6B95"
+                    />
+                  </svg>
+                  <p>LinkedIn</p>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <svg
+                    width="25"
+                    height="24"
+                    viewBox="0 0 25 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <rect
+                      x="0.586914"
+                      y="0.00219727"
+                      width="24"
+                      height="24"
+                      rx="12"
+                      fill="#EDEDED"
+                    />
+                    <path
+                      d="M12.8793 16.6555L10.1712 16.6049C9.29439 16.5872 8.41537 16.6224 7.55573 16.4397C6.24802 16.1667 6.15538 14.8281 6.05844 13.7053C5.92486 12.1267 5.97657 10.5195 6.22865 8.95412C6.37095 8.07578 6.93097 7.55166 7.79703 7.49463C10.7206 7.28765 13.6636 7.31218 16.5807 7.40874C16.8888 7.41759 17.199 7.46598 17.5028 7.52105C19.0023 7.78966 19.0389 9.30659 19.1361 10.5836C19.233 11.8737 19.1921 13.1705 19.0068 14.4518C18.8581 15.5128 18.5737 16.4025 17.3735 16.4884C15.8696 16.6007 14.4003 16.6911 12.8922 16.6623C12.8923 16.6555 12.8836 16.6555 12.8793 16.6555ZM11.2872 13.9695C12.4205 13.3046 13.5321 12.6507 14.6589 11.9902C13.5235 11.3253 12.414 10.6714 11.2872 10.0109V13.9695Z"
+                      fill="#3F6B95"
+                    />
+                  </svg>
+                  <p>YouTube</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <p class="footer__copyright">
+          Copyright &copy; RainyDays | All Rights Reserved
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,63 @@
+/* || CHECKOUTSUCCESS */
+
+.order-confirmation {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 32px;
+  align-items: center;
+  text-align: center;
+  padding-top: 2rem;
+}
+
+.order-confirmation svg {
+  max-width: 100px;
+}
+
+.order-confirmation p {
+  font-size: var(--font-size-paragraph-large);
+}
+
+.order-confirmation__buttons {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin-bottom: 4rem;
+  justify-content: center;
+}
+
+.order-confirmation .button__primary,
+.order-confirmation .button__secondary {
+  padding: 18px 24px;
+  font-size: var(--font-size-paragraph-medium);
+  margin-block: 1rem;
+  min-width: 342px;
+}
+
+@media (min-width: 600px) {
+  .order-confirmation svg {
+    max-width: 150px;
+  }
+}
+
+@media (min-width: 800px) {
+  .order-confirmation {
+    min-height: 800px;
+  }
+
+  .order-confirmation .button__primary,
+  .order-confirmation .button__secondary {
+    padding: 24px 36px;
+    font-size: var(--font-size-paragraph-large);
+    margin-inline: 1rem;
+    min-width: 290px;
+  }
+
+  .order-confirmation__buttons {
+    flex-direction: row;
+  }
+
+  .order-confirmation svg {
+    max-width: 200px;
+  }
+}
