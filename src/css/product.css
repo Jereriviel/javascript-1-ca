@@ -50,6 +50,7 @@
 
 .product-page-details .button__primary {
   padding: 18px 24px;
+  cursor: pointer;
 }
 
 .product-page-details .button__secondary {

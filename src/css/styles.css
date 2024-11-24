@@ -91,6 +91,29 @@ button {
 
 /* || Utilities */
 
+.loader {
+  width: 1.5rem;
+  height: 1.5rem;
+  border: 0.25rem solid;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  display: none;
+  margin: 2rem;
+  justify-self: center;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 .container {
   padding-inline: 1rem;
   max-width: 1600px;
@@ -227,6 +250,20 @@ header > a {
 .hamburger-icon,
 .search-icon {
   padding-right: 1rem;
+}
+
+.shopping-basket {
+  position: relative;
+  display: inline-block;
+}
+
+.notification {
+  position: absolute;
+  top: -10;
+  right: -10;
+  padding: 4px 4px;
+  border-radius: 50%;
+  background: var(--primary-color);
 }
 
 nav {

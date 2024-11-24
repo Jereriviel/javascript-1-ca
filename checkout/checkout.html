@@ -58,9 +58,10 @@
               <li><a href="../contact.html">Contact</a></li>
             </ul>
           </nav>
-          <p>
+          <a href="../checkout/checkout.html">
             <span class="material-symbols-outlined"> shopping_basket </span>
-          </p>
+            <span id="notification"></span>
+          </a>
         </div>
       </div>
     </header>
@@ -69,38 +70,8 @@
         <section class="order-summary">
           <div class="top-summary">
             <h1>Order Summary</h1>
-            <div class="order-card">
-              <img
-                class="order-summary__image"
-                src="../assets/images/products/RainyDays_Jacket_Small.jpg"
-                alt="Skylar Gore-Tex Jacket"
-              />
-              <div class="product-card">
-                <div class="p-text-trash">
-                  <div class="p-text">
-                    <p>Women's</p>
-                    <p class="product-card__name">Skylar Gore-Tex Jacket</p>
-                    <p><span>Size Medium</span></p>
-                  </div>
-                  <div class="p-trash">
-                    <span class="material-symbols-outlined"> delete </span>
-                  </div>
-                </div>
-                <div class="p-number-price">
-                  <div class="p-number">
-                    <span class="material-symbols-outlined">
-                      do_not_disturb_on
-                    </span>
-                    <p>1</p>
-                    <span class="material-symbols-outlined"> add_circle </span>
-                  </div>
-                  <div class="p-price">
-                    <p class="order-summary__item-price">NOK 3 430</p>
-                  </div>
-                </div>
-              </div>
-            </div>
             <hr />
+            <div class="loader"></div>
           </div>
           <div class="bottom-summary">
             <div class="order-summary__total">
@@ -111,7 +82,7 @@
               <hr />
               <div class="total-price">
                 <p class="order-summary__item-total">Total</p>
-                <p class="order-summary__item-total">NOK 3 430</p>
+                <p class="order-summary__item-total"></p>
               </div>
             </div>
           </div>
@@ -390,12 +361,14 @@
               </div>
             </div>
             <div class="checkout-buttons">
-              <a href="../products/jacket.html" class="button__secondary"
-                >Cancel</a
+              <a href="../products.html" class="button__secondary">Cancel</a>
+              <a
+                href="./checkoutsuccess.html"
+                class="button__primary"
+                id="checkout-button"
               >
-              <a href="checkoutsuccess.html" class="button__primary"
-                >Checkout</a
-              >
+                Checkout
+              </a>
             </div>
           </form>
         </section>
