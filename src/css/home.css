@@ -10,7 +10,6 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding-top: 72px;
 }
 
 .hero h1 {
@@ -50,9 +49,13 @@
   padding-bottom: 4rem;
 }
 
+.sales-banner__content {
+  display: flex;
+  flex-direction: column;
+}
+
 .sales-banner h2 {
   font-size: var(--font-size-display-small);
-  padding-top: 4rem;
 }
 
 .sales-banner p {
@@ -96,7 +99,7 @@
   .sales-banner h2 {
     font-size: var(--font-size-display);
     padding-top: 0;
-    text-align: center;
+    text-align: left;
   }
 
   .sales-banner p {
@@ -111,5 +114,6 @@
 
   .sales-banner .button__secondary {
     padding: 28px 56px;
+    max-width: fit-content;
   }
 }

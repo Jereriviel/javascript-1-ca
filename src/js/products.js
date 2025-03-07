@@ -25,26 +25,43 @@ function displayProducts(products) {
     var product = products[i];
 
     productList.innerHTML += `
-    <div class="product-card">
+    <article class="product-card">
+    <figure class="product-card__image-container">
     <a href="./products/product.html?id=${product.id}">
-            <img
-              class="product-card__image"
-              src="${product.image.url}"
-              alt="${product.image.alt}"
-            />
-            <div class="product-card__details">
-              <p class="product-card__gender">${product.gender}</p>
-              <p class="product-card__name">${product.title}</p>
-              <p class="product-card__before-price">${
-                product.price !== product.discountedPrice ? product.price : ""
-              }</p>
-              <p class="product-card__price">${product.discountedPrice}</p>
+          <img
+            class="product-card__image"
+            src="${product.image.url}"
+            alt="${product.image.alt}"
+          />
+          </a>
+        </figure>
+        <div class="product-card__details">
+            <div class="product-card__top">
+              <div class="product-card__heading">
+                <p class="product-card__gender">${
+                  product.gender === "Male"
+                    ? "Men's"
+                    : product.gender === "Female"
+                    ? "Women's"
+                    : product.gender
+                }</p>
+<a href="./products/product.html?id=${product.id}">
+                <p class="product-card__name">${product.title}</p>
+</a>
+              </div>
               <span class="material-symbols-outlined${
                 product.favorite ? " filled" : ""
               }"> favorite </span>
             </div>
-            </a>
+            <div class="product-card__bottom">
+              <p class="product-card__price">$ ${product.discountedPrice}</p>
+              <p class="product-card__before-price">${
+                product.price !== product.discountedPrice ? product.price : ""
+              }</p>
+            </div>
           </div>
+      </article>
+    
     `;
   }
 }

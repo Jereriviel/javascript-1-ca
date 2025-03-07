@@ -12,6 +12,7 @@
 
 .order-confirmation svg {
   max-width: 100px;
+  padding-bottom: 2rem;
 }
 
 .order-confirmation p {

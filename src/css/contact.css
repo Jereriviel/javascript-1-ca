@@ -7,6 +7,10 @@
 
 .contact-us {
   font-size: var(--font-size-paragraph-large);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding-bottom: 1rem;
 }
 
 .contact-us p {
@@ -14,12 +18,13 @@
 }
 
 .contact-details {
-  min-height: 800px;
+  min-height: 600px;
   font-size: var(--font-size-paragraph-large);
   background-image: url(../../assets/images/backgrounds/background_contact.jpg);
   background-position: right;
   background-size: cover;
   color: var(--neutral-color-white);
+  padding-bottom: 2rem;
 }
 
 .contact-details h2 {
@@ -33,11 +38,16 @@
 
 .contact-details__info {
   text-align: center;
-  padding-top: 2rem;
 }
 
 .contact-details__info div {
   padding-block: 1rem;
+}
+
+.contact-details__address {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .form__contact {
@@ -93,10 +103,12 @@
 
   .contact-details__info {
     text-align: left;
+    padding-top: 2rem;
   }
 
   .contact-us {
     padding-top: 2rem;
+    padding-bottom: 4rem;
   }
 
   .contact-us p {

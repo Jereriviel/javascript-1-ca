@@ -9,3 +9,66 @@ body {
   min-height: 100vh;
   margin: 0;
 }
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  overflow-wrap: break-word;
+  text-wrap: balance;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin-block-end: 0;
+  margin: 0;
+}
+
+ul,
+ol {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+button {
+  border-style: none;
+  border-width: 0px;
+  padding-block: 0px;
+  padding-inline: 0px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+button,
+input,
+label {
+  line-height: 2;
+}

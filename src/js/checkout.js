@@ -54,7 +54,13 @@ function displayProducts(products) {
   <div class="product-card">
     <div class="p-text-trash">
       <div class="p-text">
-        <p>${product.gender}</p>
+        <p>${
+          product.gender === "Male"
+            ? "Men's"
+            : product.gender === "Female"
+            ? "Women's"
+            : product.gender
+        }</p>
         <p class="product-card__name">${product.title}</p>
         <p>
           <span>Size Medium</span>

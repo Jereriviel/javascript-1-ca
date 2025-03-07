@@ -40,7 +40,12 @@
   padding-bottom: 1rem;
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 800px) {
+  .product-list {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+  }
+
   .filter-icon {
     display: none;
   }
@@ -51,9 +56,11 @@
   }
 }
 
-@media (min-width: 600px) {
+@media (min-width: 1000px) {
   .product-list {
-    display: flex;
-    flex-wrap: wrap;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 2rem;
+    padding-bottom: 2rem;
   }
 }
