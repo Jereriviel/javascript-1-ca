@@ -67,7 +67,7 @@ function displayProduct(product) {
     </span>
   </div>
   <div class="product-page__price">
-    <p>${product.discountedPrice}</p>
+    <p>$ ${product.discountedPrice}</p>
     <p class="product-page-details__before-price">${
       product.price !== product.discountedPrice ? product.price : ""
     }</p>

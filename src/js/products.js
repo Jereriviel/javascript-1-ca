@@ -26,7 +26,7 @@ function displayProducts(products) {
 
     productList.innerHTML += `
     <article class="product-card">
-    <figure class="product-card__image-container">
+    <figure class="product-card__image-container product-card__zoom">
     <a href="./products/product.html?id=${product.id}">
           <img
             class="product-card__image"
