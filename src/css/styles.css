@@ -454,6 +454,12 @@ footer li {
   justify-self: center;
 }
 
+.footer__newsletter {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
 .footer__newsletter h3 {
   padding-bottom: 0.5rem;
   font-weight: 500;
@@ -461,6 +467,7 @@ footer li {
 
 .form__newsletter {
   display: flex;
+  width: 100%;
 }
 
 .form__newsletter input {
@@ -469,6 +476,8 @@ footer li {
   padding: 8px;
   border-style: solid;
   border-width: 1px;
+  flex-grow: 1;
+  min-width: 0;
 }
 
 .form__newsletter ::placeholder {
@@ -482,6 +491,7 @@ footer li {
   font-size: var(--font-size-paragraph-medium);
   font-weight: 500;
   padding: 8px 18px;
+  white-space: nowrap;
 }
 
 .footer__copyright {

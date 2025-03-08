@@ -143,8 +143,9 @@
   padding-bottom: 2rem;
 }
 
-.payment-icons svg {
+.payment-icons img {
   padding-right: 4px;
+  padding-bottom: 4px;
   cursor: pointer;
 }
 
