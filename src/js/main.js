@@ -1,8 +1,8 @@
 async function getProducts() {
   showLoader();
   try {
-    var result = await fetch("https://v2.api.noroff.dev/rainy-days");
-    var json = await result.json();
+    const result = await fetch("https://v2.api.noroff.dev/rainy-days");
+    const json = await result.json();
     return json.data;
   } catch (error) {
     console.error(
@@ -15,7 +15,7 @@ async function getProducts() {
 }
 
 function addToCart(productId) {
-  var cart = getCart();
+  const cart = getCart();
 
   if (cart.includes(productId)) {
     window.alert("Item is already added.");
@@ -32,14 +32,14 @@ function addToCart(productId) {
 }
 
 function getCart() {
-  var cartString = window.sessionStorage.getItem("cart") || "[]";
-  var cart = JSON.parse(cartString);
+  const cartString = window.sessionStorage.getItem("cart") || "[]";
+  const cart = JSON.parse(cartString);
   return cart;
 }
 
 function cartNotification() {
-  var notification = document.getElementById("notification");
-  var cart = getCart();
+  const notification = document.getElementById("notification");
+  const cart = getCart();
 
   if (cart.length > 0) {
     notification.classList.add("notification");
@@ -51,11 +51,11 @@ function cartNotification() {
 cartNotification();
 
 function showLoader() {
-  var loader = document.querySelector(".loader");
+  const loader = document.querySelector(".loader");
   loader.style.display = "flex";
 }
 
 function hideLoader() {
-  var loader = document.querySelector(".loader");
+  const loader = document.querySelector(".loader");
   loader.style.display = "none";
 }

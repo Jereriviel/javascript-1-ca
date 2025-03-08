@@ -1,9 +1,9 @@
 async function getProduct() {
   showLoader();
   try {
-    var id = new URLSearchParams(window.location.search).get("id");
-    var result = await fetch(`https://v2.api.noroff.dev/rainy-days/${id}`);
-    var json = await result.json();
+    const id = new URLSearchParams(window.location.search).get("id");
+    const result = await fetch(`https://v2.api.noroff.dev/rainy-days/${id}`);
+    const json = await result.json();
     return json.data;
   } catch (error) {
     console.error(
@@ -18,7 +18,7 @@ async function getProduct() {
 async function prepareProduct() {
   showLoader();
   try {
-    var product = await getProduct();
+    const product = await getProduct();
 
     displayProduct(product);
   } catch (error) {
@@ -34,11 +34,11 @@ async function prepareProduct() {
 prepareProduct();
 
 function displayProduct(product) {
-  var productSingle = document.querySelector(".product-page-details");
-  var productImage = document.querySelector(".product-page-showcase");
-  var breadcrumb = document.querySelector(".breadcrumb--here");
-  var title = document.head.querySelector("title");
-  var description = document
+  const productSingle = document.querySelector(".product-page-details");
+  const productImage = document.querySelector(".product-page-showcase");
+  const breadcrumb = document.querySelector(".breadcrumb--here");
+  const title = document.head.querySelector("title");
+  const description = document
     .getElementsByName("Description")[0]
     .getAttribute("content");
 

@@ -1,7 +1,7 @@
 async function prepareProducts(gender) {
   showLoader();
   try {
-    var products = await getProducts();
+    const products = await getProducts();
 
     displayProducts(gender ? filterProducts(products, gender) : products);
   } catch (error) {
@@ -17,12 +17,12 @@ async function prepareProducts(gender) {
 prepareProducts();
 
 function displayProducts(products) {
-  var productList = document.querySelector(".product-list");
+  const productList = document.querySelector(".product-list");
 
   productList.innerHTML = "";
 
-  for (var i = 0; i < products.length; i++) {
-    var product = products[i];
+  for (let i = 0; i < products.length; i++) {
+    const product = products[i];
 
     productList.innerHTML += `
     <article class="product-card">
@@ -67,14 +67,14 @@ function displayProducts(products) {
 }
 
 function filterProducts(products, gender) {
-  var filteredProducts = products.filter(
+  const filteredProducts = products.filter(
     (product) => product.gender === gender
   );
 
   return filteredProducts;
 }
 
-var genderFilter = document.querySelector("#gender");
+const genderFilter = document.querySelector("#gender");
 
 genderFilter.addEventListener("change", (ev) =>
   prepareProducts(ev.target.value)

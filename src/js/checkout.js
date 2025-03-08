@@ -1,9 +1,9 @@
 async function prepareCart() {
   showLoader();
   try {
-    var products = await getProducts();
-    var cart = getCart();
-    var productsInCart = products.filter((product) =>
+    const products = await getProducts();
+    const cart = getCart();
+    const productsInCart = products.filter((product) =>
       cart.includes(product.id)
     );
 
@@ -20,12 +20,12 @@ prepareCart();
 
 async function removeFromCart(productId) {
   try {
-    var cart = getCart();
-    var newCart = cart.filter((cartProductId) => cartProductId !== productId);
+    const cart = getCart();
+    const newCart = cart.filter((cartProductId) => cartProductId !== productId);
 
     window.sessionStorage.setItem("cart", JSON.stringify(newCart));
 
-    var cartElement = document.querySelector(
+    const cartElement = document.querySelector(
       `.top-summary [data-id="${productId}"]`
     );
 
@@ -39,15 +39,15 @@ async function removeFromCart(productId) {
 }
 
 function displayProducts(products) {
-  var topSummary = document.querySelector(".top-summary");
-  var mobileSummary = document.querySelector(
+  const topSummary = document.querySelector(".top-summary");
+  const mobileSummary = document.querySelector(
     ".order-summary__total-mobile .mobile-price"
   );
 
   mobileSummary.innerHTML = "";
 
-  for (var i = 0; i < products.length; i++) {
-    var product = products[i];
+  for (let i = 0; i < products.length; i++) {
+    const product = products[i];
 
     topSummary.innerHTML += `
     <div class="order-card__summary" data-id="${product.id}">
@@ -113,16 +113,16 @@ function displayProducts(products) {
 }
 
 function displayTotal() {
-  var itemTotalElement = document.querySelector(".order-summary__item-total");
-  var mobileTotalElement = document.querySelector(
+  const itemTotalElement = document.querySelector(".order-summary__item-total");
+  const mobileTotalElement = document.querySelector(
     ".order-summary__total-mobile .order-summary__item-total"
   );
 
-  var priceElements = [
+  const priceElements = [
     ...document.querySelectorAll(".top-summary .order-summary__item-price"),
   ];
 
-  var total = priceElements.reduce(
+  const total = priceElements.reduce(
     (acc, product) => acc + Number(product.textContent),
     0
   );
