@@ -79,3 +79,24 @@ const genderFilter = document.querySelector("#gender");
 genderFilter.addEventListener("change", (ev) =>
   prepareProducts(ev.target.value)
 );
+
+function showErrorModal(errorMessage) {
+  const dialog = document.getElementById("error_modal_products");
+  dialog.showModal();
+
+  if (errorMessage) {
+    document.getElementById("products_error_message").innerHTML = errorMessage;
+  }
+}
+
+const closeModalX = document.getElementById("close_modal_x");
+const closeModalContinue = document.getElementById("close_modal_continue");
+const dialog = document.getElementById("error_modal_products");
+
+closeModalX.addEventListener("click", () => {
+  dialog.close();
+});
+
+closeModalContinue.addEventListener("click", () => {
+  dialog.close();
+});

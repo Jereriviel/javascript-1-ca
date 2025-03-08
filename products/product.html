@@ -72,6 +72,8 @@
     </header>
     <main class="main__jacket center-content">
       <div class="loader"></div>
+      <div id="snackbar_added">Item added to cart</div>
+      <div id="snackbar_already-added">Item already added</div>
       <div class="container">
         <section class="breadcrumb">
           <ul>
@@ -91,6 +93,26 @@
         <section class="product-page-showcase"></section>
         <section class="product-page-details container"></section>
       </div>
+
+      <dialog class="modal" id="error_modal_product">
+        <div class="modal__content">
+          <div class="modal__heading">
+            <h4>Error: Loading product failed.</h4>
+            <button id="close_modal_x" class="button__close">
+              <span class="material-symbols-outlined" aria-label="Close">
+                close
+              </span>
+            </button>
+          </div>
+          <p id="product_error_message"></p>
+          <p>Please continue to try again.</p>
+          <div class="modal__buttons">
+            <button id="close_modal_continue" class="button__primary">
+              Continue
+            </button>
+          </div>
+        </div>
+      </dialog>
     </main>
     <footer>
       <div class="container">

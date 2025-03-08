@@ -154,6 +154,47 @@ details li {
   margin-block: 4px;
 }
 
+#snackbar_added,
+#snackbar_already-added {
+  visibility: hidden;
+  position: fixed;
+  z-index: 1;
+  left: 50%;
+  bottom: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--neutral-color-white);
+  margin: 1rem;
+  padding: 1rem;
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 000, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#snackbar_added.snackbar-show,
+#snackbar_already-added.snackbar-show {
+  visibility: visible;
+  animation: fadein 0.5s, fadeout 0.5s 1s;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeout {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
 @media (min-width: 1200px) {
   .main__jacket > div {
     grid-template-columns: 1fr 1fr;

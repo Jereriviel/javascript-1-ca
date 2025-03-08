@@ -2,14 +2,21 @@ async function getProduct() {
   showLoader();
   try {
     const id = new URLSearchParams(window.location.search).get("id");
-    const result = await fetch(`https://v2.api.noroff.dev/rainy-days/${id}`);
-    const json = await result.json();
-    return json.data;
+    const response = await fetch(`https://v2.api.noroff.dev/rainy-days/${id}`);
+
+    if (response.ok) {
+      const result = await response.json();
+      return result.data;
+    } else {
+      const errorMessage = result.errors
+        ? result.errors[0].message
+        : "Error while fetching data from Rainy Days API.";
+      showErrorModal(errorMessage);
+      console.error("Get posts error:", errorMessage);
+    }
   } catch (error) {
-    console.error(
-      "Error while fetching data from Rainy Days API.",
-      error.message
-    );
+    console.error("Get posts error:", error);
+    showErrorModal();
   } finally {
     hideLoader();
   }
@@ -197,3 +204,24 @@ function displayProduct(product) {
 
   description.textContent = product.description;
 }
+
+function showErrorModal(errorMessage) {
+  const dialog = document.getElementById("error_modal_product");
+  dialog.showModal();
+
+  if (errorMessage) {
+    document.getElementById("product_error_message").innerHTML = errorMessage;
+  }
+}
+
+const closeModalX = document.getElementById("close_modal_x");
+const closeModalContinue = document.getElementById("close_modal_continue");
+const dialog = document.getElementById("error_modal_product");
+
+closeModalX.addEventListener("click", () => {
+  dialog.close();
+});
+
+closeModalContinue.addEventListener("click", () => {
+  dialog.close();
+});

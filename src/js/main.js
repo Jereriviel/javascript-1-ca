@@ -1,14 +1,21 @@
 async function getProducts() {
   showLoader();
   try {
-    const result = await fetch("https://v2.api.noroff.dev/rainy-days");
-    const json = await result.json();
-    return json.data;
+    const response = await fetch("https://v2.api.noroff.dev/rainy-days");
+
+    if (response.ok) {
+      const result = await response.json();
+      return result.data;
+    } else {
+      const errorMessage = result.errors
+        ? result.errors[0].message
+        : "Error while fetching data from Rainy Days API.";
+      showErrorModal(errorMessage);
+      console.error("Get posts error:", errorMessage);
+    }
   } catch (error) {
-    console.error(
-      "Error while fetching data from Rainy Days API.",
-      error.message
-    );
+    console.error("Get posts error:", error);
+    showErrorModal();
   } finally {
     hideLoader();
   }
@@ -18,7 +25,7 @@ function addToCart(productId) {
   const cart = getCart();
 
   if (cart.includes(productId)) {
-    window.alert("Item is already added.");
+    showAlreadyAddedMessage();
     return;
   }
 
@@ -26,7 +33,7 @@ function addToCart(productId) {
 
   window.sessionStorage.setItem("cart", JSON.stringify(cart));
 
-  window.alert("Item added to cart.");
+  showAddedMessage();
 
   cartNotification();
 }
@@ -58,4 +65,30 @@ function showLoader() {
 function hideLoader() {
   const loader = document.querySelector(".loader");
   loader.style.display = "none";
+}
+
+function showAddedMessage() {
+  const createSuccess = document.getElementById("snackbar_added");
+
+  createSuccess.className = "snackbar-show";
+
+  setTimeout(function () {
+    createSuccess.className = createSuccess.className.replace(
+      "snackbar-show",
+      ""
+    );
+  }, 1500);
+}
+
+function showAlreadyAddedMessage() {
+  const createSuccess = document.getElementById("snackbar_already-added");
+
+  createSuccess.className = "snackbar-show";
+
+  setTimeout(function () {
+    createSuccess.className = createSuccess.className.replace(
+      "snackbar-show",
+      ""
+    );
+  }, 1500);
 }
