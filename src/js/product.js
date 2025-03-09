@@ -78,7 +78,12 @@ function displayProduct(product) {
   <a href="#" class="product-page-details__links">Read more</a>
 </div>
 <div class="product-page__sizes">
-  <p>Sizes: ${product.sizes}</p>
+<p>Sizes:</p>
+<div class="size-buttons">
+${product.sizes
+  .map((size) => `<p class="button__secondary">${size}</p>`)
+  .join("")}
+  </div>
   <a href="#" class="product-page-details__links">Size Guide</a>
 </div>
 <div class="product-page__colors">

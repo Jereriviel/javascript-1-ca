@@ -119,6 +119,11 @@ details li {
   gap: 1rem;
 }
 
+.product-page__colors p {
+  width: max-content;
+  cursor: pointer;
+}
+
 .included-warranty,
 .included-shipping {
   gap: 0.5rem;
