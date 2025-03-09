@@ -18,6 +18,7 @@
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
     />
     <script defer src="src/js/main.js"></script>
+    <script defer src="src/js/index.js"></script>
   </head>
   <body>
     <header>
@@ -74,103 +75,60 @@
     </header>
     <main>
       <section class="hero">
-        <div class="container">
-          <h1>RainyDays</h1>
-          <p>
-            Because stepping out of your comfort zone <br />demands quality at
-            every turn.
-          </p>
+        <div class="container hero__content">
+          <div>
+            <h1>RainyDays</h1>
+            <p>
+              Because stepping out of your comfort zone demands quality at every
+              turn.
+            </p>
+          </div>
         </div>
       </section>
       <section class="newest-collection">
         <div class="container">
+          <div class="loader"></div>
           <h2>Our Newest Collection</h2>
-          <!-- Create Image carousel-->
-          <div class="newest-collection__carousel">
-            <p>Coming soon!</p>
-            <!-- <div class="product-card">
-              <a href="products.html">
-                <img
-                  class="product-card__image"
-                  src="assets/images/products/RainyDays_Jacket1.jpg"
-                  alt="Scott Gore-Tex Insulated Jacket"
-                />
-                <div class="product-card__details">
-                  <p class="product-card__gender">Men's</p>
-                  <p class="product-card__name">
-                    Scott Gore-Tex Insulated Jacket
-                  </p>
-                  <p class="product-card__price">NOK 6 900</p>
-                  <span class="material-symbols-outlined"> favorite </span>
-                </div>
-              </a>
-            </div>
-            <div class="product-card">
-              <a href="products.html">
-                <img
-                  class="product-card__image"
-                  src="assets/images/products/RainyDays_Jacket2.jpg"
-                  alt="Skylar Gore-Tex Active Jacket"
-                />
-                <div class="product-card__details">
-                  <p class="product-card__gender">Women's</p>
-                  <p class="product-card__name">
-                    Skylar Gore-Tex Active Jacket
-                  </p>
-                  <p class="product-card__price">NOK 4 500</p>
-                  <span class="material-symbols-outlined"> favorite </span>
-                </div>
-              </a>
-            </div>
-            <div class="product-card">
-              <a href="products.html">
-                <img
-                  class="product-card__image"
-                  src="assets/images/products/RainyDays_Jacket3.jpg"
-                  alt="Scott Gore-Tex Alpha Jacket"
-                />
-                <div class="product-card__details">
-                  <p class="product-card__gender">Men's</p>
-                  <p class="product-card__name">Scott Gore-Tex Alpha Jacket</p>
-                  <p class="product-card__price">NOK 4 500</p>
-                  <span class="material-symbols-outlined"> favorite </span>
-                </div>
-              </a>
-            </div>
-            <div class="product-card">
-              <a href="products.html">
-                <img
-                  class="product-card__image"
-                  src="assets/images/products/RainyDays_Jacket4.jpg"
-                  alt="Scott Gore-Tex Pro Jacket"
-                />
-                <div class="product-card__details">
-                  <p class="product-card__gender">Men's</p>
-                  <p class="product-card__name">Scott Gore-Tex Pro Jacket</p>
-                  <p class="product-card__price">NOK 5 900</p>
-                  <span class="material-symbols-outlined"> favorite </span>
-                </div>
-              </a>
-            </div> -->
-          </div>
+          <div class="newest-collection__cards"></div>
         </div>
       </section>
       <section class="sales-banner">
         <div class="sales-banner__content container">
-          <h2>10% Off</h2>
-          <p>
-            Our most popular jacket for the season is now on sale! <br />The
-            Women's Rainy Days M83 jacket delivers waterproof,<br />
-            breathable protection from head to waist. <br />
-            Perfect for the adventure seekers.
-          </p>
+          <div>
+            <h2>10% Off</h2>
+            <p class="sales-banner__text">
+              Our most popular jacket for the season is now on sale! The Puddle
+              Jumper jacket is a stylish and practical jacket for those rainy
+              days. Perfect for the adventure seekers!
+            </p>
+          </div>
           <a
             class="button__secondary"
-            href="products/product.html?id=97e77845-a485-4301-827f-51b673d4230f"
+            href="products/product.html?id=d2e44336-7c12-4a41-bf06-133399da5bd9"
             >Shop here</a
           >
         </div>
       </section>
+
+      <dialog class="modal" id="error_modal_index">
+        <div class="modal__content">
+          <div class="modal__heading">
+            <h4>Error: Loading products failed.</h4>
+            <button id="close_modal_x" class="button__close">
+              <span class="material-symbols-outlined" aria-label="Close">
+                close
+              </span>
+            </button>
+          </div>
+          <p id="index_error_message"></p>
+          <p>Please continue to try again.</p>
+          <div class="modal__buttons">
+            <button id="close_modal_continue" class="button__primary">
+              Continue
+            </button>
+          </div>
+        </div>
+      </dialog>
     </main>
     <footer>
       <div class="container">
