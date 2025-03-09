@@ -130,3 +130,16 @@ function displayTotal() {
   itemTotalElement.textContent = total.toFixed(2);
   mobileTotalElement.textContent = total.toFixed(2);
 }
+
+function checkoutEmptyCart() {
+  var checkoutButton = document.querySelector("#checkout-button");
+
+  checkoutButton.addEventListener("click", clearCart);
+}
+
+checkoutEmptyCart();
+
+function clearCart() {
+  window.sessionStorage.setItem("cart", JSON.stringify([]));
+  cartNotification();
+}
