@@ -69,7 +69,7 @@ function displayProduct(product) {
   <div class="product-page__price">
     <p>$ ${product.discountedPrice}</p>
     <p class="product-page-details__before-price">${
-      product.price !== product.discountedPrice ? product.price : ""
+      product.price !== product.discountedPrice ? `$ ${product.price}` : ""
     }</p>
   </div>
 </div>
@@ -200,7 +200,13 @@ ${product.sizes
 
   productImage.innerHTML = `
 <figure class="product-page-showcase__image">
+<div class="showcase__image-sale">  ${
+    product.price !== product.discountedPrice
+      ? '<div class="on-sale"><p>On sale</p></div>'
+      : ""
+  }<div>
   <img src="${product.image.url}" alt="${product.image.alt}" />
+
 </figure>
       `;
 

@@ -32,6 +32,18 @@
   max-height: 600px;
 }
 
+.showcase__image-sale {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.showcase__image-sale .on-sale {
+  padding: 1rem 2rem;
+  position: absolute;
+  font-size: var(--font-size-paragraph-large);
+}
+
 .product-page-details {
   grid-area: p-p-details;
 }
