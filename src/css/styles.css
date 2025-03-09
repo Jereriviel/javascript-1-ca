@@ -81,7 +81,7 @@ button {
   background-color: var(--secondary-color-light);
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 600px) {
   h1,
   h2 {
     text-align: start;
@@ -160,6 +160,7 @@ textarea {
 @media (min-width: 600px) {
   .container {
     padding-inline: 64px;
+    width: 100%;
   }
 }
 
