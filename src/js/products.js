@@ -33,6 +33,11 @@ function displayProducts(products) {
             src="${product.image.url}"
             alt="${product.image.alt}"
           />
+          ${
+            product.price !== product.discountedPrice
+              ? '<div class="on-sale"><p>On sale</p></div>'
+              : ""
+          }
           </a>
         </figure>
         <div class="product-card__details">
@@ -55,9 +60,9 @@ function displayProducts(products) {
             </div>
             <div class="product-card__bottom">
               <p class="product-card__price">$ ${product.discountedPrice}</p>
-              <p class="product-card__before-price">${
-                product.price !== product.discountedPrice ? product.price : ""
-              }</p>
+<p class="product-card__before-price">
+  ${product.price !== product.discountedPrice ? `$ ${product.price}` : ""}
+</p>
             </div>
           </div>
       </article>

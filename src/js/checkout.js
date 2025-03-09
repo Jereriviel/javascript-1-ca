@@ -50,12 +50,14 @@ function displayProducts(products) {
     const product = products[i];
 
     topSummary.innerHTML += `
-    <div class="order-card__summary" data-id="${product.id}">
+    <article class="order-card__summary" data-id="${product.id}">
+    <a href="/products/product.html?id=${product.id}">
         <img
           class="order-summary__image"
           src="${product.image.url}"
           alt="${product.image.alt}"
         />
+        </a>
       <div class="product-card__summary">
         <div class="product-card__top-trash">
           <div class="p-text">
@@ -66,7 +68,9 @@ function displayProducts(products) {
                   ? "Women's"
                   : product.gender
               }</p>
+              <a href="/products/product.html?id=${product.id}">
               <p class="product-card__name">${product.title}</p>
+              </a>
               <p><span>Size Medium</span></p>
           </div>
             
@@ -84,7 +88,7 @@ function displayProducts(products) {
             </div>
           </div>
       </div>
-    </div>
+    </article>
     `;
 
     mobileSummary.innerHTML += `
