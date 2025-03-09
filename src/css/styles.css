@@ -202,10 +202,6 @@ header > a {
   align-items: center;
 }
 
-.header__icons p {
-  padding-right: 1rem;
-}
-
 .logo-main {
   max-width: 80px;
 }
@@ -262,11 +258,20 @@ header > a {
 
 .notification {
   position: absolute;
-  top: -10;
-  right: -10;
-  padding: 4px 4px;
+  right: 6px;
+  top: -6px;
   border-radius: 50%;
   background: var(--primary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 20px;
+  width: 20px;
+}
+
+.notification p {
+  color: var(--neutral-color-white);
+  font-size: 10px;
 }
 
 nav {
@@ -307,10 +312,6 @@ nav li {
     max-width: 172px;
   }
 
-  .header__icons p {
-    padding-inline: 1rem;
-  }
-
   .header__icons :nth-child(1) {
     order: 1;
   }
@@ -349,6 +350,11 @@ nav li {
 
   .form__search {
     margin-inline: 0.5rem;
+  }
+
+  .notification {
+    right: -10px;
+    top: -4px;
   }
 
   nav {

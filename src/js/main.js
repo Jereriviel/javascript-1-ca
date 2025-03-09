@@ -53,11 +53,14 @@ function getCart() {
 function cartNotification() {
   const notification = document.getElementById("notification");
   const cart = getCart();
+  const cartNumber = cart.length;
 
   if (cart.length > 0) {
     notification.classList.add("notification");
+    notification.innerHTML = `<p>${cartNumber}</p>`;
   } else {
     notification.classList.remove("notification");
+    notification.innerHTML = "";
   }
 }
 

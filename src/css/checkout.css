@@ -151,14 +151,11 @@
 
 .expiry-cvv {
   display: flex;
+  justify-content: space-between;
 }
 
 .expiry-cvv input {
   max-width: 112px;
-}
-
-.expiry {
-  margin-right: 10.25rem;
 }
 
 .expiry,
