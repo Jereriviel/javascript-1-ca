@@ -1,10 +1,16 @@
+let storedProducts = null;
+
 async function getProducts() {
+  if (storedProducts) {
+    return storedProducts;
+  }
   showLoader();
   try {
     const response = await fetch("https://v2.api.noroff.dev/rainy-days");
 
     if (response.ok) {
       const result = await response.json();
+      storedProducts = result.data;
       return result.data;
     } else {
       const errorMessage = result.errors
