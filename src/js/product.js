@@ -87,7 +87,8 @@ ${product.sizes
   <a href="#" class="product-page-details__links">Size Guide</a>
 </div>
 <div class="product-page__colors">
-  <p>Color: ${product.baseColor}</p>
+<p>Color:</p>
+  <p class="button__secondary">${product.baseColor}</p>
 </div>
 <div class="product-page__list">
   <div class="included-shipping">
