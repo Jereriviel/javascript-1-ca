@@ -184,7 +184,7 @@
 .mobile-price {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 1.5rem;
 }
 
 .product-item__header {
@@ -216,6 +216,7 @@
 
 .checkout-buttons a {
   margin-block: 0.5rem;
+  min-width: 56px;
 }
 
 @media (min-width: 1000px) {

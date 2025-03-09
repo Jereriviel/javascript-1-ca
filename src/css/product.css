@@ -132,6 +132,7 @@ details li {
 .size-buttons,
 .color-buttons {
   cursor: pointer;
+  gap: 0.5rem;
 }
 
 .size-buttons,
@@ -157,6 +158,7 @@ details li {
 
 .size-buttons .button__secondary {
   margin-block: 4px;
+  min-width: 85px;
 }
 
 #snackbar_added,
