@@ -1,6 +1,6 @@
 # Cross Course Project: RainyDays Online Store
 
-![image](https://jereriviel.github.io/portfolio/assets/img/thumbnail_rainydays.png)
+![image](https://jereriviel.github.io/portfolio/assets/img/thumbnail_rainydays.webp)
 
 ## Description
 
