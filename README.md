@@ -1,6 +1,6 @@
 # Cross Course Project: RainyDays Online Store
 
-![image](https://jereriviel.github.io/portfolio/assets/img/thumbnail_rainydays.png)
+![image](https://jereriviel.github.io/portfolio/assets/img/thumbnail_rainydays.webp)
 
 ## Description
 
@@ -40,10 +40,6 @@ To run the app, run the following commands:
 ```bash
 npm run start
 ```
-
-## Contributing
-
-If you would like to contribute to this project, please open a pull request so the code can be reviewed.
 
 ## Contact
 
