@@ -27,15 +27,31 @@ async function getProducts() {
   }
 }
 
-function addToCart(productId) {
+async function addToCart(productId) {
   const cart = getCart();
+  const products = await getProducts();
+  const product = products.find((p) => p.id === productId);
 
-  if (cart.includes(productId)) {
+  const selectedSize = document.querySelector(
+    ".size-buttons input[type='radio']:checked"
+  );
+
+  if (!selectedSize) {
+    alert("Please select a size before adding to cart.");
+    return;
+  }
+
+  let cartItem = {
+    ...product,
+    size: selectedSize.value,
+  };
+
+  if (cart.find((item) => item.id === productId)) {
     showAlreadyAddedMessage();
     return;
   }
 
-  cart.push(productId);
+  cart.push(cartItem);
 
   window.sessionStorage.setItem("cart", JSON.stringify(cart));
 

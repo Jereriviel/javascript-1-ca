@@ -78,10 +78,15 @@ function displayProduct(product) {
   <a href="#" class="product-page-details__links">Read more</a>
 </div>
 <div class="product-page__sizes">
-<p>Sizes:</p>
+<p>Choose size:</p>
 <div class="size-buttons">
 ${product.sizes
-  .map((size) => `<p class="button__secondary">${size}</p>`)
+  .map(
+    (
+      size
+    ) => `<div class="label-input"><input type="radio" id="${size}" name="size" value="${size}"/>
+<label for="${size}">${size}</label></div>`
+  )
   .join("")}
   </div>
   <a href="#" class="product-page-details__links">Size Guide</a>
@@ -93,7 +98,7 @@ ${product.sizes
 <div class="product-page__list">
   <div class="included-shipping">
     <span class="material-symbols-outlined"> check </span>
-    <p class="order-summary__item-details">Free shipping above NOK 2 500</p>
+    <p class="order-summary__item-details">Free shipping above $ 200</p>
   </div>
   <div class="included-warranty">
     <span class="material-symbols-outlined"> check </span>

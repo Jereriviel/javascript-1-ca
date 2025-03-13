@@ -11,12 +11,19 @@
 
 .breadcrumb {
   grid-area: breadcrumb;
+  font-size: var(--font-size-paragraph-small);
+  padding-top: 0.5rem;
 }
 
 .breadcrumb ul {
   display: flex;
   align-items: center;
   padding: 0px;
+}
+
+.breadcrumb li {
+  display: flex;
+  align-items: center;
 }
 
 .breadcrumb--here {
@@ -105,6 +112,9 @@ details li {
 }
 
 .product-page__top {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .product-page__heading {
@@ -144,14 +154,8 @@ details li {
 .size-buttons,
 .color-buttons {
   cursor: pointer;
-  gap: 0.5rem;
-}
-
-.size-buttons,
-.color-buttons {
-  padding-bottom: 1rem;
-  display: flex;
-  flex-wrap: wrap;
+  gap: 1.5rem;
+  font-weight: 500;
 }
 
 .size-buttons,
@@ -160,6 +164,45 @@ details li {
 .included-warranty {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
+}
+
+.size-buttons input,
+.size-buttons label {
+  margin: 0;
+  line-height: 0;
+  display: flex;
+  align-items: center;
+}
+
+.label-input {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+input[type="radio"] {
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border: 1px solid rgb(71, 71, 71);
+  border-radius: 50%;
+  outline: none;
+  background-color: var(--neutral-color-white);
+  cursor: pointer;
+  padding: 0;
+}
+
+input[type="radio"]:hover {
+  outline: 6px solid #b8ccde65;
+}
+
+input[type="radio"]:checked {
+  width: 16px;
+  height: 16px;
+  background-color: var(--primary-color-medium);
+  border: 2px solid var(--neutral-color-white);
+  outline: 1.5px solid var(--primary-color-medium);
 }
 
 .color-buttons span {
@@ -168,9 +211,16 @@ details li {
   border-radius: 50%;
 }
 
-.size-buttons .button__secondary {
-  margin-block: 4px;
-  min-width: 85px;
+.radio-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.radio-label input,
+.radio-label label {
+  margin: 0;
+  line-height: 0;
 }
 
 #snackbar_added,

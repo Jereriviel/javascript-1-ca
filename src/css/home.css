@@ -40,6 +40,10 @@
   width: 100%;
 }
 
+.newest-collection h2 {
+  padding-bottom: 1rem;
+}
+
 .sales-banner {
   display: flex;
   align-items: center;

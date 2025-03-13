@@ -1,13 +1,8 @@
-async function prepareCart() {
+function prepareCart() {
   showLoader();
   try {
-    const products = await getProducts();
     const cart = getCart();
-    const productsInCart = products.filter((product) =>
-      cart.includes(product.id)
-    );
-
-    displayProducts(productsInCart);
+    displayProducts(cart);
     displayTotal();
   } catch (error) {
     console.error("Error while rendering cart.", error.message);
@@ -21,7 +16,7 @@ prepareCart();
 async function removeFromCart(productId) {
   try {
     const cart = getCart();
-    const newCart = cart.filter((cartProductId) => cartProductId !== productId);
+    const newCart = cart.filter((cartProduct) => cartProduct.id !== productId);
 
     window.sessionStorage.setItem("cart", JSON.stringify(newCart));
 
@@ -44,23 +39,17 @@ function displayProducts(products) {
     ".order-summary__total-mobile .mobile-price"
   );
 
-  mobileSummary.innerHTML = "";
-
-  for (let i = 0; i < products.length; i++) {
-    const product = products[i];
-
+  products.forEach((product) => {
     topSummary.innerHTML += `
-    <article class="order-card__summary" data-id="${product.id}">
-    <a href="/products/product.html?id=${product.id}">
-        <img
-          class="order-summary__image"
-          src="${product.image.url}"
-          alt="${product.image.alt}"
-        />
+      <article class="order-card__summary" data-id="${product.id}">
+        <a href="../products/product.html?id=${product.id}">
+          <img class="order-summary__image" src="${product.image.url}" alt="${
+      product.image.alt
+    }" />
         </a>
-      <div class="product-card__summary">
-        <div class="product-card__top-trash">
-          <div class="p-text">
+        <div class="product-card__summary">
+          <div class="product-card__top-trash">
+            <div class="p-text">
               <p>${
                 product.gender === "Male"
                   ? "Men's"
@@ -68,27 +57,27 @@ function displayProducts(products) {
                   ? "Women's"
                   : product.gender
               }</p>
-              <a href="/products/product.html?id=${product.id}">
-              <p class="product-card__name">${product.title}</p>
+              <a href="../products/product.html?id=${product.id}">
+                <p class="product-card__name">${product.title}</p>
               </a>
-              <p><span>Size Medium</span></p>
+              <p><span>Size: ${
+                product.size ? product.size : "Not selected"
+              }</span></p> <!-- Fix here -->
+            </div>
+            <div class="p-trash" onclick="removeFromCart('${product.id}')">
+              <span class="material-symbols-outlined"> delete </span>
+            </div>
           </div>
-            
-              <div class="p-trash" onclick="removeFromCart('${product.id}')">
-                <span class="material-symbols-outlined"> delete </span>
-              </div>
-            
-        </div>
           <div class="p-number-price">
-          <p class="valuta">$</p>
+            <p class="valuta">$</p>
             <div class="p-price">
               <p class="order-summary__item-price">${product.discountedPrice.toFixed(
                 2
               )}</p>
             </div>
           </div>
-      </div>
-    </article>
+        </div>
+      </article>
     `;
 
     mobileSummary.innerHTML += `
@@ -111,7 +100,7 @@ function displayProducts(products) {
         </div>
         </div>
     `;
-  }
+  });
 
   displayTotal();
 }

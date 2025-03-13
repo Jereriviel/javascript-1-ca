@@ -44,7 +44,7 @@
   padding-block: 1rem;
 }
 
-.contact-details__address {
+.contact-details__text {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
