@@ -93,7 +93,16 @@ ${product.sizes
 </div>
 <div class="product-page__colors">
 <p>Color:</p>
-  <p class="button__secondary">${product.baseColor}</p>
+  <div class="label-input">
+  <input
+    type="radio"
+    id="${product.baseColor}"
+    name="color"
+    value="${product.baseColor}"
+    checked
+  />
+  <label for="${product.baseColor}">${product.baseColor}</label>
+</div>
 </div>
 <div class="product-page__list">
   <div class="included-shipping">

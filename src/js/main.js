@@ -37,7 +37,7 @@ async function addToCart(productId) {
   );
 
   if (!selectedSize) {
-    alert("Please select a size before adding to cart.");
+    showSizeMessage();
     return;
   }
 
@@ -102,7 +102,7 @@ function showAddedMessage() {
       "snackbar-show",
       ""
     );
-  }, 1500);
+  }, 2000);
 }
 
 function showAlreadyAddedMessage() {
@@ -115,5 +115,18 @@ function showAlreadyAddedMessage() {
       "snackbar-show",
       ""
     );
-  }, 1500);
+  }, 2000);
+}
+
+function showSizeMessage() {
+  const createSuccess = document.getElementById("snackbar_size");
+
+  createSuccess.className = "snackbar-show";
+
+  setTimeout(function () {
+    createSuccess.className = createSuccess.className.replace(
+      "snackbar-show",
+      ""
+    );
+  }, 2000);
 }

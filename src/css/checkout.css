@@ -151,7 +151,7 @@
 
 .expiry-cvv {
   display: flex;
-  justify-content: space-between;
+  gap: 17.2rem;
 }
 
 .expiry-cvv input {
