@@ -42,11 +42,15 @@ function displayProducts(products) {
   products.forEach((product) => {
     topSummary.innerHTML += `
       <article class="order-card__summary" data-id="${product.id}">
-        <a href="../products/product.html?id=${product.id}">
-          <img class="order-summary__image" src="${product.image.url}" alt="${
-      product.image.alt
-    }" />
-        </a>
+        <figure class="order-summary__figure">
+          <a href="../products/product.html?id=${product.id}">
+            <img
+              class="order-summary__image"
+              src="${product.image.url}"
+              alt="${product.image.alt}"
+            />
+          </a>
+        </figure>
         <div class="product-card__summary">
           <div class="product-card__top-trash">
             <div class="p-text">

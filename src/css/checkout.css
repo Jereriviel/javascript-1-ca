@@ -151,7 +151,7 @@
 
 .expiry-cvv {
   display: flex;
-  gap: 17.2rem;
+  justify-content: space-between;
 }
 
 .expiry-cvv input {
@@ -250,6 +250,13 @@
     padding-bottom: 1.5rem;
   }
 
+  .order-summary__figure {
+    width: 164px;
+    display: flex;
+    justify-content: center;
+    background-color: var(--neutral-color-white);
+  }
+
   .p-text span {
     color: var(--secondary-color-light);
   }
@@ -291,6 +298,11 @@
   .order-form .button__primary {
     padding: 24px 36px;
     min-width: 242px;
+  }
+
+  .expiry-cvv {
+    justify-content: flex-start;
+    gap: 7.2rem;
   }
 }
 
